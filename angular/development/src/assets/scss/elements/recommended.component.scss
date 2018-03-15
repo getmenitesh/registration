@@ -1,0 +1,87 @@
+@import "../general";
+@import "../responsive/recommended.responsive";
+
+.container {
+    .group-Title {
+        h4 {
+            display: inline-block;
+        }
+        a {
+            float:right;
+            font-family: MaisonNeue-Bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $cerulean;
+            padding: 18px 0 0;
+        }
+    }
+    .item {
+        white-space: normal;
+        display: inline-block;
+        border: solid 1px $alto;
+        span {
+            width: 100%;
+            display: block;
+            background-size: cover;
+            div.fav-share {
+                float: right;
+                i {
+                    opacity: 0.7;
+                }
+            }
+            div.flag {
+                font-family: MaisonNeue-Bold;
+                text-align: center;
+                color: $white;
+                text-transform: uppercase;
+                display: inline-block;
+                &.spring {
+                    background-color: $butterfly-bush;
+                }
+                &.volunteer {
+                    background-color: $cerulean;
+                }
+            }
+        }
+        div {
+            &.title {
+                font-family: MaisonNeue-Bold;
+                color: $tundora;
+            }
+            &.agency {
+                font-family: MaisonNeue-Book;
+                text-align: left;
+                color: $boulder;
+            }
+            &.description, &.description-short {
+                font-family: MaisonNeue-Book;
+                color: $boulder;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            &.opportunity-details {
+                font-family: MaisonNeue-Book;
+                color: $boulder;
+                i {
+                    vertical-align: middle;
+                }
+            }
+        }
+        button {
+            background-color: $picton-blue;
+            font-family: MaisonNeue-Bold;
+            text-align: center;
+            color: $white;
+            box-shadow: none;
+            border: none;
+            text-transform: uppercase;
+            &.limited, &.full {
+                border: solid 1px $picton-blue;
+                color: $picton-blue;
+                background-color: $white;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

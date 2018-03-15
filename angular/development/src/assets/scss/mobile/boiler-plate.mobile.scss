@@ -1,0 +1,64 @@
+
+/* MOBILE */
+@media (min-width: 320px) { /* Container is 100% wide */
+    .boiler-plate {
+        display: block;
+        width: 100%;
+        margin: 30px 0;
+        &:nth-child(even) {
+            margin-top: 15px;
+        }
+        &:nth-child(odd) {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+/* TABLET */
+@media (min-width: 768px) { /* Container is 750px wide */
+    .boiler-plate {
+        display: inline-block;
+        width: 370px;
+        margin: 30px 0;
+        &:nth-child(even) {
+            margin-left: 5px;
+            margin-top: 30px;
+        }
+        &:nth-child(odd) {
+            margin-right: 5px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 992px) { /* Container is 970px wide */
+    .boiler-plate {
+        width: 475px;
+        margin: 40px 0;
+        &:nth-child(even) {
+            margin-left: 10px;
+            margin-top: 40px;
+        }
+        &:nth-child(odd) {
+            margin-right: 10px;
+            margin-bottom: 40px;
+        }
+    }
+}
+
+/* DESKTOP LARGE */
+@media (min-width: 1200px) { /* Container is 1170px wide */
+    .boiler-plate {
+        width: 570px;
+        margin: 50px 0;
+        &:nth-child(even) {
+            margin-left: 15px;
+            margin-top: 50px;
+        }
+        &:nth-child(odd) {
+            margin-right: 15px;
+            margin-bottom: 50px;
+        }
+    }
+}

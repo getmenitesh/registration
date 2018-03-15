@@ -1,0 +1,123 @@
+@import "../mobile/modal.mobile";
+/* LOGIN MODAL */
+
+bs-modal {
+
+    .container {
+        width: 100%;
+        padding-left: 85px;
+        padding-right: 85px;
+    }
+
+    /deep/ {
+        &.modal-header {
+            button {
+                position: absolute;
+                padding: 0 !important;
+                top: 20px;
+                right: 20px;
+            }
+        }
+    }
+
+    // MODAL HEADER
+    .logo {
+        .uja-logo {
+            margin-right: 5px;
+
+            img {
+                height: 46px;
+                width: 105px;
+            }
+        }
+
+        .tfg-logo {
+            margin-left: 5px;
+
+            img {
+                height: 46px;
+                width: 71px;
+            }
+        }
+
+        .uja-logo, .tfg-logo {
+            display: inline-block;
+            width: 123px;
+            height: 50px;
+            border: solid 1px $alto;
+            border-radius: 2px;
+            text-align: center;
+        }
+
+        button {
+            background: transparent;
+            border: 0;
+            font-size: 24px;
+            color: $boulder;
+            padding-top: 14px;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    &.login-modal {
+
+        &.password-reset {
+            /deep/ {
+                .modal-footer {
+                    border-top: none;
+                }
+            }
+        }
+
+        // MODAL DESCRIPTION
+        .description {
+            font-size: 14px;
+            color: $boulder;
+            font-family: MaisonNeue-Book;
+            padding-top: 17px;
+            padding-bottom: 32px;
+        }
+
+        // MODAL CONTENT
+        /deep/ {
+            &.modal-dialog {
+                width: 770px;
+                height: 589px;
+            }
+
+            &.modal-body {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            &.modal-footer {
+                text-align: center;
+            }
+        }
+
+        .or-divider {
+            padding: 0 20px;
+        }
+
+        .no-account {
+            color: $boulder;
+            font-family: MaisonNeue-Book;
+            font-size: 14px;
+            padding-right: 28px;
+        }
+
+        .footer-wrapper {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            a {
+                &.btn {
+                    line-height: 35px;
+                }
+            }
+        }
+    }
+}
+
+/* END OF LOGIN MODAL */

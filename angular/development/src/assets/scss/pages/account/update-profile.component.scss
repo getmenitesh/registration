@@ -1,0 +1,45 @@
+
+/* MOBILE */
+@media (min-width: 320px) {
+    .update-profile, .change-password, .monthly-donations {
+        .row {
+            font-family: MaisonNeue-Demi;
+            color: $tundora;
+            border-radius: 2px;
+            border: solid 1px $alto;
+            margin-left: 16px;
+            margin-right: 16px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+    .update-profile, .change-password, .monthly-donations {
+        .row {
+            padding: 20px;
+            margin-bottom: 150px;
+        }
+
+        .col-sm-6 {
+            width: 100%;
+        }
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 992px) {
+    .update-profile, .change-password, .monthly-donations {
+
+        .col-sm-6 {
+            width: 50% !important;
+        }
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 1200px) {
+
+}
+

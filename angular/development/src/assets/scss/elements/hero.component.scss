@@ -1,0 +1,244 @@
+@import "../general";
+
+.hero {
+    height: 513px;
+    width: 100%;
+    display: block;
+    > div {
+        > div {
+            h1, p, button {
+                color: $white;
+            }
+            h1 {
+                display: inline-block;
+                width: 100%;
+                margin: 0;
+                padding-bottom: 10px;
+            }
+            button {
+                display: block;
+                width: 172px;
+                height: 39px;
+                background: none;
+                border: 1px solid $white;
+                border-radius: 2px;
+                font-family: MaisonNeue-Bold;
+                font-size: 14px;
+                text-transform: uppercase;
+            }
+            p {
+                margin: 0 auto;
+                line-height: 24px;
+            }
+        }
+        &.center {
+            h1, p {
+                text-align: center;
+            }
+            button {
+                margin: 20px auto;
+            }
+            > div {
+                margin: 0 auto;
+            }
+        }
+        &.left {
+            h1, p {
+                text-align: left;
+            }
+            button {
+                float: left;
+            }
+        }
+        &.right {
+            h1, p {
+                text-align: right;
+            }
+            button {
+                float: right;
+            }
+            > div {
+                float: right;
+            }
+        }
+    }
+}
+
+/* MOBILE */
+@media (min-width: 320px) {
+    .hero {
+        > div {
+            width: 100%;
+            > div {
+                width: 100%;
+                position: relative;
+                button {
+                    margin: 20px auto;
+                    float: none;
+                }
+                h1 {
+                    font-size: 35px;
+                }
+                p {
+                    padding: 0 14px;
+                }
+            }
+            &.right, &.left {
+                > div {
+                    h1, p {
+                        text-align: center;
+                    }
+                }
+            }
+            &.top {
+                > div {
+                    top: 20px;
+                }
+            }
+            &.bottom {
+                > div {
+                    top: 128px;
+                }
+            }
+            &.middle {
+                > div {
+                    top: 110px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 375px) {
+    .hero {
+        > div {
+            &.bottom {
+                > div {
+                    top: 170px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 500px) {
+    .hero {
+        > div {
+            &.bottom {
+                > div {
+                    top: 200px;
+                }
+            }
+            p {
+                width: 470px;
+            }
+        }
+    }
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+    .hero {
+        > div {
+            > div {
+                width: 570px;
+                button {
+                    margin-top: 40px;
+                }
+                h1 {
+                    font-size: 48px;
+                }
+                p {
+                    padding: 0;
+                    width: auto;
+                }
+            }
+            &.middle {
+                > div {
+                    top: 135px;
+                }
+            }
+            &.bottom {
+                > div {
+                    top: 227px;
+                }
+            }
+            &.left {
+                > div {
+                    left: 85px;
+                    button {
+                        margin: 40px 0 0;
+                    }
+                    h1, p {
+                        text-align: left;
+                    }
+                }
+            }
+            &.right {
+                > div {
+                    right: 85px;
+                    button {
+                        margin: 40px 0 0;
+                        float: right !important;
+                    }
+                    h1, p {
+                        text-align: right;
+                    }
+                }
+            }
+            &.center {
+                button {
+                    margin: 40px auto 0;
+                    float: none;
+                }
+            }
+        }
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 992px) {
+    .hero {
+        > div {
+            > div {
+                h1 {
+                    font-size: 70px;
+                }
+            }
+            &.left {
+                > div {
+                    left: 135px;
+                }
+            }
+            &.right {
+                > div {
+                    right: 135px;
+                }
+            }
+            &.bottom {
+                > div {
+                    top: 210px;
+                }
+            }
+        }
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 1200px) {
+    .hero {
+        > div {
+            > div {
+                width: 770px;
+            }
+            &.bottom {
+                > div {
+                    top: 230px;
+                }
+            }
+        }
+    }
+    p {
+
+    }
+}

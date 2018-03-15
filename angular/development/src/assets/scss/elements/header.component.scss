@@ -1,0 +1,295 @@
+@import "../general";
+@import "../mobile/header.mobile";
+
+a {
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#header {
+    z-index: 990;
+    .navbar-brand {
+        &.link {
+            color: blue;
+        }
+    }
+
+    .site-switcher {
+        width: 100%;
+        height: 37px;
+        background-color: $mystic;
+        z-index: 110;
+        a, span {
+            height: 37px;
+            background-color: $mystic;
+            display: inline-block;
+            font-family: MaisonNeue-Book;
+            font-size: 12px;
+            text-align: center;
+            color: #767676;
+            line-height: 37px;
+            text-decoration: none;
+
+            &.nav-link {
+                width: 147px;
+            }
+
+            &.site-function {
+                margin-right: 40px;
+                font-family: MaisonNeue-Book;
+
+                &.login {
+                    color: rgba(0, 165, 244, 0.7);
+                }
+                &.account {
+                    i {
+                        vertical-align: middle;
+                    }
+                }
+            }
+
+            &.selected {
+                background-color: $white;
+            }
+        }
+        div {
+            float: right;
+        }
+        ul.account-menu {
+            width: 274px;
+            background-color: $white;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+            position: absolute;
+            z-index: 10;
+            margin-left: -250px;
+            padding: 0;
+            display: none;
+
+            &.active {
+                display: block;
+            }
+            li {
+                height: 43px;
+                a {
+                    display: block;
+                    text-align: left;
+                    background-color: $white;
+                    padding-left: 30px;
+                    font-family: MaisonNeue-Book;
+                    font-size: 14px;
+                    color: $boulder;
+                    line-height: 43px;
+                    height: 43px;
+                }
+                &:first-child {
+                    color: $tundora;
+                    a {
+                        font-family: MaisonNeue-Bold;
+                    }
+                }
+                &:first-child, &:last-child {
+                    height: 58px;
+                    a {
+                        line-height: 58px;
+                        height: 58px;
+                    }
+                    &.divide-after {
+                        height: 59px;
+                    }
+                }
+                &.divide-after {
+                    border-bottom: 1px solid $alto;
+                    height: 44px;
+                }
+            }
+        }
+    }
+
+    nav.navbar.navbar-default {
+        width: 100%;
+        background-color: #ffffff;
+        border: none;
+        z-index: 100;
+        .logo {
+            a {
+                text-decoration: none;
+            }
+            .caret {
+                color: $gray;
+
+                &.active {
+                    color: $picton-blue;
+                }
+            }
+        }
+        .discover {
+            vertical-align: middle;
+            .discover-menu {
+                float: left;
+                width: 100%;
+                a {
+                    &:first-of-type {
+                        font-family: MaisonNeue-Bold;
+                        font-size: 14px;
+                        color: $cerulean;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        line-height: 24px;
+                    }
+                    &:last-of-type {
+                        float: right;
+                        width: 24px;
+                        i {
+                            margin: 0;
+                            float: left;
+                        }
+                    }
+                }
+            }
+            i {
+                float: left;
+                position: relative;
+                color: $boulder;
+            }
+            select {
+                float: left;
+                padding-left: 44px;
+                font-family: MaisonNeue-Book;
+                &:nth-child(4) {
+                    border-left: 1px solid $alto;
+                }
+                -webkit-appearance: none;
+                appearance: none;
+                &::-ms-expand {
+                    display: none;
+                }
+            }
+            my-date-range-picker.form-control {
+                float: left;
+                padding: 0;
+                height: 44px;
+                /deep/ {
+                    .mydrp {
+                        height: 44px;
+                        background-color: #E8EFF1;
+                        border: none;
+                        width: 100% !important;
+                        .selectiongroup {
+                            width: 100%;
+                            input {
+                                height: 44px !important;
+                                padding-left: 44px;
+                                padding-right: 0;
+                                background-color: #E8EFF1;
+                                font-size: 14px;
+                                margin-left: 0;
+                                margin-top: 0;
+                                width: 100%;
+                            }
+                            button {
+                                margin-top: 0;
+                            }
+                        }
+                    }
+                    .selbtngroup {
+                        float: left;
+                        width: 100%;
+                        background: transparent;
+                        .btnpicker {
+                            height: 44px;
+                            width: 100%;
+                            background: transparent;
+                        }
+                        .btnclear {
+                            display: none;
+                        }
+                        .icon-mydrpcalendar:before {
+                            float: left;
+                            content: "date_range";
+                            font-family: 'Material Icons';
+                            font-size: 20px;
+                            color: #767676;
+                            padding-left: 8px;
+                        }
+                    }
+                }
+            }
+            input {
+                &[type="text"] {
+                    float: left;
+                    padding-left: 44px;
+                    &:nth-child(4) {
+                        border-left: 1px solid $alto;
+                    }
+                }
+                &[type="submit"] {
+                    border: none;
+                    height: 44px;
+                    background-color: rgba(0, 165, 244, 0.7);
+                    font-family: MaisonNeue-Bold;
+                    font-size: 14px;
+                    text-align: center;
+                    color: $white;
+                    text-transform: uppercase;
+                    padding: 12px 20px;
+                }
+            }
+        }
+        .discover-toggle {
+            height: 42px;
+            border-radius: 2px;
+            border: solid 1px $alto;
+            vertical-align: middle;
+            background-color: $mystic;
+            line-height: 42px;
+            &:focus {
+                outline: none;
+            }
+            i {
+                float: left;
+                margin: 9px -34px 9px 8px;
+                position: relative;
+                color: $boulder;
+            }
+        }
+        .navbar-links {
+            ul {
+
+                &.active {
+                    display: block;
+                }
+
+                li {
+                    a {
+                        font-family: MaisonNeue-Demi;
+                        text-align: left;
+                        color: $tundora;
+                        text-decoration: none;
+                        .caret {
+                            color: $gray;
+                        }
+                        i {
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/deep/ {
+    .modal-footer {
+        a.get-started {
+            line-height: 35px;
+        }
+    }
+
+    .site-function {
+        &.text {
+            display: none !important;
+        }
+    }
+}

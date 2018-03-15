@@ -1,0 +1,150 @@
+// SITE WIDE FONTS
+@font-face {
+    font-family: 'TradeGothic';
+    src: url('/assets/fonts/tradegothic/TradeGothicLT-BoldCondTwenty.eot');
+    src: url('/assets/fonts/tradegothic/TradeGothicLT-BoldCondTwenty.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/tradegothic/TradeGothicLT-BoldCondTwenty.woff2') format('woff2'),
+    url('/assets/fonts/tradegothic/TradeGothicLT-BoldCondTwenty.woff') format('woff'),
+    url('/assets/fonts/tradegothic/TradeGothicLT-BoldCondTwenty.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+/*
+* Font: Maison Neue
+* Description: Project's main font.
+*/
+
+// Normal
+@font-face {
+    font-family: 'MaisonNeue-Book';
+    src: url('/assets/fonts/maisonneue/maisonneue-book-webfont.eot');
+    src: url('/assets/fonts/maisonneue/maisonneue-book-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/maisonneue/maisonneue-book-webfont.woff2') format('woff2'),
+    url('/assets/fonts/maisonneue/maisonneue-book-webfont.woff') format('woff'),
+    url('/assets/fonts/maisonneue/maisonneue-book-webfont.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+// Bold
+@font-face {
+    font-family: 'MaisonNeue-Bold';
+    src: url('/assets/fonts/maisonneue/maisonneue-bold-webfont.eot');
+    src: url('/assets/fonts/maisonneue/maisonneue-bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/maisonneue/maisonneue-bold-webfont.woff2') format('woff2'),
+    url('/assets/fonts/maisonneue/maisonneue-bold-webfont.woff') format('woff'),
+    url('/assets/fonts/maisonneue/maisonneue-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+}
+
+// Demi
+@font-face {
+    font-family: 'MaisonNeue-Demi';
+    src: url('/assets/fonts/maisonneue/maisonneue-demi-webfont.eot');
+    src: url('/assets/fonts/maisonneue/maisonneue-demi-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/maisonneue/maisonneue-demi-webfont.woff2') format('woff2'),
+    url('/assets/fonts/maisonneue/maisonneue-demi-webfont.woff') format('woff'),
+    url('/assets/fonts/maisonneue/maisonneue-demi-webfont.ttf') format('truetype');
+    font-weight: normal;
+}
+
+
+// Light
+@font-face {
+    font-family: 'MaisonNeue-Light';
+    src: url('/assets/fonts/maisonneue/maisonneue-light-webfont.eot');
+    src: url('/assets/fonts/maisonneue/maisonneue-light-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/maisonneue/maisonneue-light-webfont.woff2') format('woff2'),
+    url('/assets/fonts/maisonneue/maisonneue-light-webfont.woff') format('woff'),
+    url('/assets/fonts/maisonneue/maisonneue-light-webfont.ttf') format('truetype');
+    font-weight: normal;
+}
+
+// Medium
+@font-face {
+    font-family: 'MaisonNeue-Medium';
+    src: url('/assets/fonts/maisonneue/maisonneue-medium-webfont.eot');
+    src: url('/assets/fonts/maisonneue/maisonneue-medium-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/maisonneue/maisonneue-medium-webfont.woff2') format('woff2'),
+    url('/assets/fonts/maisonneue/maisonneue-medium-webfont.woff') format('woff'),
+    url('/assets/fonts/maisonneue/maisonneue-medium-webfont.ttf') format('truetype');
+    font-weight: normal;
+}
+
+
+// ICONS
+@font-face {
+    font-family: 'social-icons';
+    src: url('/assets/fonts/icons/uja.woff2') format("woff2"),
+    url('/assets/fonts/icons/uja.woff') format("woff"),
+    url('/assets/fonts/icons/uja.ttf') format("truetype"),
+    url('/assets/fonts/icons/uja.svg#UJA') format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    @font-face {
+        font-family: 'social-icons';
+        src: url('/assets/fonts/icons/uja.svg#UJA') format("svg")
+    }
+}
+
+.uja-icon {
+    font-size: 25.6px;
+    display: inline-block;
+    font-family: social-icons;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-decoration: inherit;
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+
+    &.facebook:before {
+        content: ""
+    }
+
+    &.instagram:before {
+        content: ""
+    }
+
+    &.linkedin:before {
+        content: ""
+    }
+
+    &.twitter:before {
+        content: ""
+    }
+
+    &.search {
+        -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+
+        &:before {
+            content: ""
+        }
+    }
+
+    &.left:before {
+        content: ""
+    }
+
+    &.check-circle:before {
+        content: ""
+    }
+
+    &.right:before {
+        content: ""
+    }
+
+    &.user:before {
+        content: ""
+    }
+}
+
+//END OF ICONS

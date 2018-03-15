@@ -1,0 +1,374 @@
+
+@import "../general";
+@import "../elements/opportunity-cards-x4";
+
+#opportunity-page {
+    .top-background {
+        height: 300px;
+        background-image: linear-gradient(to top, $white, $mystic);
+        width: 100%;
+
+        h3 {
+            background-color: $abbey;
+            color: $white;
+            margin: 0;
+            font-size: 36px;
+        }
+    }
+}
+
+@media (min-width: 320px) {
+    .top-background {
+        padding: 110px 16px 0;
+        h3 {
+            width: 100%;
+            line-height: 36px;
+            padding: 40px 30px;
+            height: 190px;
+        }
+        hr {
+            margin: 30px 0;
+        }
+    }
+    .opportunity-cards {
+        padding-bottom: 50px;
+        h4 {
+            padding: 7px 0 50px;
+            margin: 0 auto;
+            width: 343px;
+        }
+    }
+
+    .opp.container {
+        padding: 0 16px;
+    }
+    .opportunity-information {
+        width: 100%;
+        display: block;
+        float: none;
+        .opp-agency {
+            padding: 35px 0 15px;
+            img {
+                height: 25px;
+                width: 25px;
+            }
+        }
+    }
+    .signup-favorite {
+        width: 100%;
+        padding: 44px 0;
+        display: block;
+        float: none;
+        .signup, .favorite {
+            float: none;
+            width: 100%;
+            padding: 20px;
+        }
+        > div + div {
+            margin-top: 33px;
+        }
+
+        ul {
+            list-style-type: none;
+            display: inline-block;
+            padding-left: 0;
+        }
+
+        .opportunityError {
+            margin-top: 25px;
+            list-style-type: disc;
+            margin-left: 16px;
+            color: $red-orange;
+        }
+    }
+
+    .opp-tags {
+        .tags {
+            height: 60px;
+            white-space: nowrap;
+            li {
+                margin: 0px 10px;
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .opp-tags {
+        padding: 10px 0;
+        .tags {
+            padding: 0;
+            li {
+                &:first-of-type {
+                    margin-left: 0;
+                }
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+        }
+        .title {
+            padding: 0 0 30px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .top-background {
+        padding: 142px 0 0;
+        h3 {
+            width: 100%;
+            line-height: 158px;
+            padding: 0 30px;
+            height: 158px;
+        }
+    }
+    .opportunity-cards {
+        h4 {
+            padding: 0 0 50px;
+            margin: 0;
+            width: auto;
+        }
+    }
+    hr {
+        margin: 50px 0;
+        clear: both;
+    }
+    .opportunity-cards {
+        padding-bottom: 50px;
+    }
+
+    .opp.container {
+        padding: 0;
+    }
+    .opportunity-information {
+        border: solid 1px $alto;
+        padding: 30px;
+        .opp-agency {
+            padding: 0;
+        }
+    }
+    .signup-favorite {
+        padding: 44px 0;
+        display: block;
+        .signup, .favorite {
+            float: left;
+            width: 360px;
+            padding: 20px;
+        }
+        > div + div {
+            margin-left: 30px;
+            margin-top: 0;
+        }
+    }
+
+    .opp-tags {
+        display: inline-block;
+        .tags {
+            height: auto;
+            white-space: normal;
+            display: inline-block;
+            width: calc(100% - 88px);
+            float: left;
+            padding-left: 20px;
+            li {
+                margin-bottom: 20px;
+            }
+        }
+        .title {
+            display: inline-block;
+            width: 88px;
+            float: left;
+            text-align: right;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .top-background {
+        h3 {
+            width: 770px;
+        }
+    }
+    .opportunity-information {
+        width: 770px;
+    }
+    .signup-favorite {
+        .signup, .favorite {
+            width: 370px;
+            padding: 20px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .opportunity-information {
+        display: inline-block;
+        float: left;
+    }
+    .signup-favorite {
+        width: 400px;
+        padding: 44px 30px;
+        display: inline-block;
+        float: left;
+        > div + div {
+            margin-top: 33px;
+            margin-left: 0;
+        }
+    }
+}
+
+.opportunity-information {
+    background-color: $white;
+    .opp-agency {
+        img {
+            margin-right: 4px;
+        }
+
+        a {
+            text-decoration: none;
+            color: $boulder;
+        }
+        font-family: MaisonNeue-Book;
+        font-size: 12px;
+        text-align: left;
+        color: $boulder;
+        line-height: 25px;
+    }
+    .opp-about {
+        h4 {
+            margin: 0 0 30px;
+        }
+        p {
+            font-family: MaisonNeue-Book;
+            font-size: 14px;
+            line-height: 1.71;
+            text-align: left;
+            color: $boulder;
+        }
+    }
+    .opp-tags + hr {
+        margin-top: 0;
+    }
+    img.opp-image {
+        width: 100%;
+        margin-top: 40px;
+    }
+    hr {
+        margin: 30px 0;
+    }
+}
+
+.signup-favorite {
+    float: left;
+    .signup, .favorite {
+        padding: 30px 20px;
+        font-family: MaisonNeue-Bold;
+        font-size: 14px;
+        color: $tundora;
+        border: solid 1px $alto;
+        div {
+            padding: 15px 1px;
+            line-height: 24px;
+            &:first-child {
+                padding-top: 0;
+            }
+            i {
+                vertical-align: middle;
+                color: $boulder;
+                margin-right: 20px;
+            }
+        }
+        hr {
+            margin: 25px 0 20px;
+        }
+        button {
+            width: 100%;
+            line-height: 49px;
+            border: none;
+            border-radius: 2px;
+            background-image: none;
+            font-family: MaisonNeue-Bold;
+            font-size: 14px;
+            text-align: center;
+            &:active {
+                border: none;
+            }
+        }
+    }
+    .signup {
+        button {
+            background-color: $picton-blue;
+            color: $white;
+        }
+    }
+    .favorite {
+        padding-bottom: 20px;
+        button {
+            background-color: $white;
+            color: $boulder;
+            border: solid 1px $alto;
+            i {
+                vertical-align: middle;
+                margin-right: 14px;
+            }
+        }
+        > .share {
+            width: 142px;
+            height: 34px;
+            margin: 20px auto 0;
+            padding: 0;
+            a {
+                color: $boulder;
+                margin: 0 10px;
+                float: left;
+                &:first-child {
+                    margin-left: 0;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+                i {
+                    margin: 0;
+                    width: 34px;
+                    height: 34px;
+                    text-align: center;
+                    line-height: 34px;
+                    font-size: 22px;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+
+
+/* Tags */
+.opp-tags {
+    .tags {
+        overflow: auto;
+        margin-bottom: 10px;
+        li {
+            font-family: MaisonNeue-Bold;
+            font-size: 12px;
+            text-align: center;
+            line-height: 1.5;
+            color: $white;
+            display: inline-block;
+            white-space: normal;
+            border: solid 1px $alto;
+            background-color: $viking;
+            padding: 10px;
+            text-transform: uppercase;
+        }
+    }
+    .title {
+        color: $boulder;
+        font-family: MaisonNeue-Book;
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
+/* Tags */

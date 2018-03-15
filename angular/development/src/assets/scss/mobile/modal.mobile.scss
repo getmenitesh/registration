@@ -1,0 +1,77 @@
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+/* Portrait and Landscape */
+@media only screen and (max-width: 770px) {
+    modal {
+
+        /deep/ {
+            &.modal-dialog {
+                width: auto !important;
+                height: 589px;
+            }
+        }
+
+    }
+}
+
+/* Cancel all the padding to fit the size of the small screen. */
+@media only screen and (max-width: 525px) {
+    modal {
+        .container {
+            width: 100%;
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+        }
+
+        .logo {
+            .uja-logo {
+                margin-right: 0 !important;
+            }
+
+            .tfg-logo {
+                margin-left: 0 !important;
+            }
+        }
+
+        /deep/ {
+            &.modal-header {
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+/* MODAL FOOTER: align them both in the right place on login account modal*/
+@media only screen and (max-width: 426px) {
+    modal {
+        /deep/ {
+            &.modal-footer {
+                .no-account {
+                    padding-right: 0 !important;
+                    display: block !important;
+                }
+
+                .get-started {
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}
+
+
+/* On really small screen, this allows the top logos the align in correct from and
+ button will be fix width of 100% */
+@media only screen and (max-width: 350px) {
+    modal {
+        .logo {
+            .uja-logo {
+                margin-bottom: 5px !important;
+            }
+        }
+
+        .btn {
+            width: 100% !important;
+        }
+    }
+}

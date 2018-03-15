@@ -1,0 +1,136 @@
+@import "../general";
+@import "../mobile/registration.mobile";
+
+/deep/ {
+    .site-function {
+        &.join {
+            display: none !important;
+        }
+
+        &.text {
+            display: inline-block !important;
+        }
+    }
+}
+
+.registration {
+
+    h3 {
+        padding-bottom: 17px;
+    }
+
+    .description {
+        font-family: MaisonNeue-Book;
+        font-size: 14px;
+        line-height: 1.71;
+        color: $boulder;
+    }
+
+    .row:nth-child(2), .row:nth-child(3) {
+        border-radius: 2px;
+        border: solid 1px $alto;
+        padding: 35px 0;
+        margin-bottom: 30px;
+    }
+
+    .logo {
+        text-align: center;
+        margin-top: 27px;
+
+        .uja-logo {
+            margin-right: 15px;
+
+            img {
+                height: 60px;
+                width: 200px;
+            }
+        }
+
+        .tfg-logo {
+            margin-left: 15px;
+
+            img {
+                height: 65px;
+                width: 144px;
+            }
+        }
+
+        .uja-logo, .tfg-logo {
+            display: inline-block;
+            width: 270px;
+            height: 110px;
+            border: solid 1px $alto;
+            border-radius: 2px;
+
+            img {
+                margin-top: 20px;
+            }
+
+        }
+    }
+
+    .form-wrapper {
+        padding-left: 100px;
+        padding-right: 100px;
+
+        .form-group {
+            margin-bottom: 18px;
+            span {
+                float: right;
+                font-family: MaisonNeue-Book;
+                font-size: 10px;
+                text-align: right;
+                color: $boulder;
+                padding-top: 10px;
+            }
+        }
+
+        .checkbox {
+            margin-top: 50px;
+            label {
+                font-family: MaisonNeue-Book;
+                font-size: 14px;
+                line-height: 1.71;
+                color: $boulder;
+                padding-top: 0;
+                display: inline-block;
+            }
+        }
+    }
+
+    my-date-picker {
+        height: 44px;
+        border-radius: 2px;
+        background-color: $mystic;
+        border: solid 1px $alto;
+        font-size: 14px;
+        font-family: MaisonNeue-Book;
+
+        /deep/ {
+            input {
+                height: 42px !important;
+                border-radius: 2px;
+                background-color: $mystic;
+                font-family: MaisonNeue-Book;
+                font-size: 14px;
+                margin-top: -7px;
+                border: none;
+            }
+
+            .selectiongroup {
+                input {
+                    margin-left: -6px;
+                    width: 103%;
+                }
+
+                button {
+                    margin-top: -5px;
+                    margin-right: -5px;
+                    padding-left: 10px;
+                    background-color: transparent;
+                    color: $boulder;
+                }
+            }
+        }
+    }
+}

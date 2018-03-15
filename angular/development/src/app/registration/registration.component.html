@@ -1,0 +1,116 @@
+<div class="container registration">
+    <div class="row text-center">
+        <div class="col-xs-12">
+            <h4>CREATE YOUR ACCOUNT</h4>
+        </div>
+    </div>
+    
+    <div class="row">
+        <form [formGroup]="registrationForm" (ngSubmit)="submitForm(registrationForm.value,registrationForm.valid)">
+            <div class="form-wrapper">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="firstName">First Name*</label>
+                        <input type="text" class="form-control" id="firstName" tabindex="1"
+                               [formControl]="registrationForm.controls['firstName']"
+                               [ngClass]="{'error red':(!registrationForm.controls['firstName'].valid && registrationForm.controls.firstName.touched) || (isSubmitted === true && !registrationForm.controls.firstName.valid)}"/>
+                        <div class="error message"
+                             *ngIf="(!registrationForm.controls['firstName'].valid && registrationForm.controls.firstName.touched) || (isSubmitted === true && !registrationForm.controls.firstName.valid)">
+                            {{formValidationError}}
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="lastName">Last Name*</label>
+                        <input type="text" class="form-control" id="lastName" tabindex="2"
+                               [ngClass]="{'error red':(!registrationForm.controls['lastName'].valid && registrationForm.controls.lastName.touched) || (isSubmitted === true && !registrationForm.controls.lastName.valid)}"
+                               [formControl]="registrationForm.controls['lastName']">
+                        <div class="error message"
+                             *ngIf="(!registrationForm.controls['lastName'].valid && registrationForm.controls.lastName.touched) || (isSubmitted === true && !registrationForm.controls.lastName.valid)">
+                            {{formValidationError}}
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="email">Email Address*</label>
+                        <input type="email" class="form-control" id="email" tabindex="3"
+                               [ngClass]="{'error red':(!registrationForm.controls['email'].valid && registrationForm.controls.email.touched) || (isSubmitted === true && !registrationForm.controls.email.valid)}"
+                               [formControl]="registrationForm.controls['email']">
+                        <div class="error message"
+                             *ngIf="(!registrationForm.controls['email'].valid && registrationForm.controls.email.touched) || (isSubmitted === true && !registrationForm.controls.email.valid)">
+                            {{emailValidation}}
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="col-sm-6" *ngIf="userId == 0">
+                    <div class="form-group">
+                        <label for="password">Password*</label>
+                        <span>Password must be a minimum of 8 characters.</span>
+                        <input type="password" class="form-control" id="password" tabindex="5"
+                               [ngClass]="{'error red':(!registrationForm.controls['password'].valid && registrationForm.controls.password.touched) || (isSubmitted === true && !registrationForm.controls.password.valid)}"
+                               [formControl]="registrationForm.controls['password']">
+                        <div class="error message"
+                             *ngIf="(!registrationForm.controls['password'].valid && registrationForm.controls.password.touched) || (isSubmitted === true && !registrationForm.controls.password.valid)">
+                            {{passwordValidation}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6" *ngIf="userId == 0">
+                    <div class="form-group">
+                        <label for="cpassword">Confirm Password*</label>
+                        <input type="password" class="form-control" id="cpassword" tabindex="6"
+                               [ngClass]="{'error red':(!registrationForm.controls['cpassword'].valid && registrationForm.controls.cpassword.touched) || (isSubmitted === true && !registrationForm.controls.cpassword.valid)}"
+                               [formControl]="registrationForm.controls['cpassword']">
+                        <div class="error message"
+                             *ngIf="(!registrationForm.controls['cpassword'].valid && registrationForm.controls.cpassword.touched) || (isSubmitted === true && !registrationForm.controls.cpassword.valid)">
+                            {{passwordValidation}}
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="dob">Date of Birth  (mm/dd/yyyy)*</label>
+                        <my-date-picker name="dob" class="form-control" id="dob" [options]="myDatePickerOptions" tabindex="8"
+                                        [formControl]="registrationForm.controls['dob']"
+                                        [ngClass]="{'error red':(!registrationForm.controls['dob'].valid && registrationForm.controls.dob.touched) || (isSubmitted === true && !registrationForm.controls.dob.valid)}"
+                        ></my-date-picker>
+                        <div class="error message"
+                             *ngIf="(!registrationForm.controls['dob'].valid && registrationForm.controls.dob.touched) || (isSubmitted === true && !registrationForm.controls.dob.valid)">
+                            {{formValidationError}}
+                        </div>
+                    </div>
+                </div>
+                
+               
+               
+                <div class="col-xs-12" *ngIf = "isRegistrationAllow == true">
+                    <div class="btn-wrapper">
+                        <input type="submit" class="btn sign-up" id="submit" value="Sign Up"/>
+                        
+                       
+                    </div>
+                </div>
+                <div class="col-xs-12" *ngIf="regErrorMessage!=''">
+                    <div class="validation" style="color: red;">
+                        {{regErrorMessage}}
+                    </div>
+                </div>
+                
+               
+            </div>
+            <div  *ngIf="responseError !=''" class="col-xs-12">
+                <div class="error message " style="float:left;margin-left: 100px;">
+                    {{responseError}}
+                </div>
+            </div>
+            
+        </form>
+    </div>
+    
+</div>

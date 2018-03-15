@@ -1,0 +1,5 @@
+configVar ={
+    "envName": "dev",
+    "url": "//localhost:4200",
+    "state": "registration"
+};

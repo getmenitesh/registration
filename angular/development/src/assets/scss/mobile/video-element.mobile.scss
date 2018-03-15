@@ -1,0 +1,84 @@
+@media (min-width: 320px) { /* Container is 100% wide */
+    .video-element {
+        margin: 50px 0;
+        div {
+            width: 100%;
+            padding: 0 10px;
+            &:nth-child(even) {
+
+            }
+            &:nth-child(odd) {
+
+            }
+            h3 {
+                font-size: 18px;
+                margin-bottom: 16px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) { /* Container is 750px wide */
+    .video-element {
+        margin: 50px 0;
+        div {
+            padding: 0;
+            &:nth-child(even) {
+                width: 310px;
+                padding: 5px 0;
+            }
+            &:nth-child(odd) {
+                margin-right: 25px;
+                width: 380px;
+            }
+            h3 {
+                font-size: 18px;
+                margin: 4px 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) { /* Container is 970px wide */
+    .video-element {
+        margin: 50px 0;
+        div {
+            height: 270px;
+            &:nth-child(even) {
+                margin-left: 55px;
+                width: 380px;
+                padding: 30px 0;
+            }
+            &:nth-child(odd) {
+                margin-right: 55px;
+                width: 480px;
+            }
+            h3 {
+                font-size: 18px;
+                margin-bottom: 16px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) { /* Container is 1170px wide */
+    .video-element {
+        margin: 50px 0;
+        div {
+            height: 320px;
+            &:nth-child(even) {
+                margin-left: 65px;
+                width: 470px;
+                padding: 50px 0;
+            }
+            &:nth-child(odd) {
+                margin-right: 65px;
+                width: 570px;
+            }
+            h3 {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

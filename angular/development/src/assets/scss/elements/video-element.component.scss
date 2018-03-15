@@ -1,0 +1,15 @@
+@import "../general";
+@import "../mobile/video-element.mobile";
+
+.video-element {
+    div {
+        float: left;
+        h3 {
+            font-family: MaisonNeue-Demi;
+            color: $tundora;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}

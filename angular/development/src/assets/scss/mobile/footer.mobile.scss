@@ -1,0 +1,41 @@
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+/* Portrait and Landscape */
+@media only screen and (max-width: 990px) {
+    footer {
+        .container {
+            .row {
+                display: block;
+                padding-top: 40px !important;
+                text-align: center;
+
+                .footer-logo {
+                    display: block;
+
+                    img {
+                        margin-bottom: 20px !important;
+                    }
+                }
+
+                .footer-menu {
+                    display: block !important;
+                    padding-left: 0 !important;
+
+
+                    a {
+                        display: block !important;
+                        padding: 20px 0 !important;
+                    }
+                }
+
+                .footer-social, .footer-copyright {
+                    text-align: center !important;
+                    padding: 20px 0 !important;
+                }
+            }
+
+            .row:last-child{
+                padding: 20px 0 !important;
+            }
+        }
+    }
+}

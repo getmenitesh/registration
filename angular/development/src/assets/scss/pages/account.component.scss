@@ -1,0 +1,123 @@
+
+@import "../general";
+@import "account/update-profile.component"; // change password and monthly donations also included in this file
+@import "account/volunteer-information.component";
+// Change Password and Monthly Donations are below.
+
+/* MOBILE */
+@media (min-width: 320px) {
+
+    #account-page {
+        font-family: MaisonNeue-Demi;
+        color: $tundora;
+        font-size: 18px;
+        /deep/ {
+            .left-section {
+                .row {
+                    border-radius: 2px;
+                    border: solid 1px $alto;
+                    margin: 0 16px 30px 16px;
+                    padding-left: 30px;
+                    padding-top: 30px;
+                    padding-bottom: 30px;
+                }
+
+                .personal-information {
+                    div:nth-child(1) {
+                        margin-bottom: 30px;
+                    }
+                }
+
+                a {
+                    color: inherit;
+                    text-decoration: none;
+
+                    &:nth-child(1) {
+                        margin-bottom: 30px;
+                    }
+                }
+
+                .facebook {
+                    background-color: $chambray;
+                    font-family: MaisonNeue-Light;
+                    text-align: center;
+                    font-size: 12px !important;
+                    padding: 15px 53px;
+
+                    a {
+                        color: $white;
+                    }
+                }
+
+                .activeLink {
+                    color: $picton-blue;
+                }
+            }
+        }
+    }
+
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+
+    #account-page {
+        /deep/ {
+            .left-section {
+                float: left;
+                width: 270px;
+
+                .row {
+                    font-size: 18px;
+                    margin: 0 0 30px 0;
+                }
+
+                .personal-information {
+                    div:nth-child(1) {
+                        margin-bottom: 30px;
+                    }
+                }
+
+                a {
+                    &:nth-child(1) {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+
+            .right-section {
+                padding-left: 300px;
+            }
+        }
+    }
+
+}
+
+/* DESKTOP */
+@media (min-width: 992px) {
+}
+
+/* DESKTOP */
+@media (min-width: 1200px) {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

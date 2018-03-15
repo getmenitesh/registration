@@ -1,0 +1,76 @@
+<div id="header">
+    <div class="site-switcher">
+       
+        <div *ngIf="!isUserLogedIn">
+            <a class="site-function join" href="/join">Join</a>
+            <span class="site-function text">Already have an account?</span>
+            <a class="site-function login" (click)="modal.open()">Login</a>
+        </div>
+        <div *ngIf="isUserLogedIn">
+            <a class="site-function join" href="/user-account/preferences">My Account</a>
+                <span class="site-function text"></span>
+                <a class="site-function login" (click)="logout()">Log Out</a>
+            
+            
+        </div>
+    </div>
+</div>
+<bs-modal #modal class="login-modal">
+    <bs-modal-header class="logo">
+        <div class="row">
+            <div class="col-xs-12">
+                <h4>LOG IN</h4>
+                <button type="button" (click)="modal.close()">
+                    <i class="material-icons">close</i>
+                </button>
+            </div>
+        </div>
+    </bs-modal-header>
+    <bs-modal-body>
+        <div class="container">
+            <div class="row">
+                <form [formGroup]="loginForm" (ngSubmit)="submitForm(loginForm.value, modal,loginForm.valid)">
+                    <div class="col-xs-12">
+                        <div class="validation">
+                            {{loginErrorMsg}}
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <label for="emailAddress">EMAIL</label>
+                            <input type="text" autofocus class="form-control" id="emailAddress" tabIndex="101"
+                                   [formControl]="loginForm.controls['email']"
+                                   [ngClass]="{'error red':!(loginForm.controls.email.untouched || loginForm.controls.email.valid)}">
+                            <div class="error message"
+                                 [hidden]="(loginForm.controls.email.untouched && !loginForm.controls.email.valid) || loginForm.controls.email.valid">
+                                Please enter email.
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <label for="password">PASSWORD</label>
+                            <input type="password" class="form-control" id="password"
+                                   [formControl]="loginForm.controls['password']"
+                                   [ngClass]="{'error red': !(loginForm.controls.password.untouched || loginForm.controls.password.valid)}" tabIndex="102">
+
+                            <div class="error message"
+                                 [hidden]="(loginForm.controls.password.untouched && !loginForm.controls.password.valid) || loginForm.controls.password.valid">
+                                Please enter valid password. Password min length is 8 characters.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="btn-wrapper">
+                            <input type="submit" class="btn sign-up" value="Log In" id="submit" tabIndex="103"/>
+                          
+                           
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </bs-modal-body>
+</bs-modal>

@@ -1,6 +1,7 @@
 module.exports = function(app) {
 
     var user = require('../controllers/user.controller.js');
+    var middleware = require("../middleware/middleware");
    // var auth = require('../controllers/auth.controller.js');
 
     // Create a new user
@@ -13,7 +14,7 @@ module.exports = function(app) {
     app.get('/user/:userId', user.findOne);
 
     // Update a user with userId
-    app.put('/user/:userId', user.update);
+    app.put('/user/:userId',middleware.routeMiddleware ,user.update);
 
     // Delete a user with userId
     app.delete('/user/:userId', user.delete);

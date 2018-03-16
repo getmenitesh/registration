@@ -1,6 +1,5 @@
 import {TestBed, inject} from '@angular/core/testing';
 import {BackendService} from './backend.service';
-import {LoaderService} from './loader.service';
 import {BaseRequestOptions, Http, HttpModule, Response, ResponseOptions, XHRBackend} from '@angular/http';
 import 'rxjs/add/operator/map';
 import {MockBackend, MockConnection} from "@angular/http/testing";
@@ -13,7 +12,7 @@ describe('BackendService', () => {
         TestBed.configureTestingModule({
             declarations: [],
             imports: [HttpModule],
-            providers: [BackendService, LoaderService, MockBackend, BaseRequestOptions,
+            providers: [BackendService,  MockBackend, BaseRequestOptions,
                 {
                     provide: Http, useFactory: (backend: MockBackend, defaultOptions: BaseRequestOptions) => {
                         return new Http(backend, defaultOptions);

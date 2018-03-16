@@ -36,7 +36,7 @@ export class BackendService {
         let headerVar = new Headers();
         let token = this.getToken();
         if (token !== '') {
-            headerVar.append('Authorization', token);
+            headerVar.append('x-access-token', token);
         }
         return this.http.get(url, {
             headers: headerVar
@@ -57,7 +57,7 @@ export class BackendService {
         let headerVar = new Headers();
         let token = this.getToken();
         if (token != null) {
-            headerVar.append('Authorization', token);
+            headerVar.append('x-access-token', token);
         }
         headerVar.append('Content-Type', 'application/json');
         return this.http.post(url, data, {
@@ -79,7 +79,7 @@ export class BackendService {
         let headerVar = new Headers();
         let token = this.getToken();
         if (token != null) {
-            headerVar.append('Authorization', token);
+            headerVar.append('x-access-token', token);
         }
         headerVar.append('Content-Type', 'application/json');
         return this.http.put(url, data, {

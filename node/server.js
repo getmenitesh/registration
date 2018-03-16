@@ -15,6 +15,7 @@ app.use(bodyParser.json())
 app.use(cookieParser());
 // Configuring the database
 var dbConfig = require('./config/database.config.js');
+var config = require('./config/config.js');
 var mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;

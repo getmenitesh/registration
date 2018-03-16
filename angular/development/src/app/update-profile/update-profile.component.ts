@@ -63,7 +63,11 @@ export class UpdateProfileComponent implements OnInit {
    
 
     getProfileDetail() {
-        this.userId=this.be.getCookie();
+        let detail = sessionStorage.getItem("userDetail");
+      
+        let userInfo = JSON.parse(detail);
+        this.userId = userInfo['_id'];
+        //this.userId=this.be.getCookie();
         this.be.get(this.be.apiUrl + '/user/'+this.userId)
         .subscribe(
             data => {console.log(data)
@@ -98,7 +102,11 @@ export class UpdateProfileComponent implements OnInit {
             }
 
             this.formActive = true;
-            let userId=this.be.getCookie();
+            let detail = sessionStorage.getItem("userDetail");
+      
+            let userInfo = JSON.parse(detail);
+            let userId = userInfo['_id'];
+           // let userId=this.be.getCookie();
             this.be.put(this.be.apiUrl + '/user/'+userId, value)
                 .subscribe(
                     data => {console.log(data)

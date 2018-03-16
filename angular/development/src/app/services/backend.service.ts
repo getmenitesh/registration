@@ -98,13 +98,14 @@ export class BackendService {
     getToken() {
         let token = '';
         token = this.getCookie();
-        let start = 0;
+        return token;
+        /*let start = 0;
         let end = token.length;
         token = token.substring(start + 5, end - 6);
         if (token === 'ef') {
             token = '';
-        }
-        return token;
+        }*/
+        
     }
 
     getCookie() {
@@ -116,11 +117,12 @@ export class BackendService {
             let tempVar = cookieArray[i].split('=');
             finalCookieData[tempVar[0]] = tempVar[1];
         }
-        tokenString = decodeURIComponent(finalCookieData['token']);
+        return finalCookieData['token'];
+       /* tokenString = decodeURIComponent(finalCookieData['token']);
         if (tokenString === undefined || tokenString == null) {
             tokenString = '';
         }
-        return tokenString;
+        return tokenString;*/
     }
 
     setCookie(cname, cvalue) {

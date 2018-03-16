@@ -1,19 +1,21 @@
 var User = require('../models/user.model.js');
-
+var jwt = require('jsonwebtoken');
+var bcrypt = require('bcryptjs');
+var config = require('../../config/config');
 exports.create = function(req, res) {
     
 	if(!req.body) {
         return res.status(400).send({message: "user can not be empty"});
     }
-
-    var user = new User({firstName: req.body.firstName ,lastName: req.body.lastName ,email: req.body.email, password: req.body.password , dob: req.body.dob});
+    var hashedPassword = bcrypt.hashSync(req.body.password, 8);
+    var user = new User({firstName: req.body.firstName ,lastName: req.body.lastName ,email: req.body.email, password: hashedPassword , dob: req.body.dob});
 
     user.save(function(err, data) {
         if(err) {
             console.log(err);
             res.status(500).send({status:"error",message: "Some error occurred while creating the user."});
         } else {
-            res.status(200).send({status:"success",message: "Registration cmpleted successfully",data:data});
+           res.status(200).send({status:"success",message: "Registration cmpleted successfully",data:data});
         }
     });
 };

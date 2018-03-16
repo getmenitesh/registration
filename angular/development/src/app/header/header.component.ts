@@ -71,10 +71,10 @@ export class HeaderComponent implements OnInit {
            console.log(value)
             this.be.post(this.be.apiUrl + '/auth', value)
                 .subscribe(
-                    data => { console.log(data.data[0]['_id'])
+                    data => {
                         if (data.status === 'success') {
                             sessionStorage.setItem("userDetail",JSON.stringify(data['data']))
-                            this.be.setCookie('token', data.data[0]['_id']);
+                            this.be.setCookie('token', data.token);
                             window.location.href = '/';
                         } else {
                             this.loginErrorMsg =data.message
